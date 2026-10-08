@@ -69,11 +69,11 @@ numbers_sum = 0
 
 for word in words:
     clean_word = word.strip(",.")
-    if clean_word.isupper():
-        uppercase += 1 
-        #zkácený zápis pro: uppercase = uppercase + 1
-    elif clean_word.istitle():
+    if clean_word.istitle():
         titlecase += 1 
+        #zkácený zápis pro: uppercase = uppercase + 1
+    elif clean_word.isupper() and clean_word.isalpha():
+        uppercase += 1
     elif clean_word.islower():
         lowercase += 1
     elif clean_word.isdigit():
